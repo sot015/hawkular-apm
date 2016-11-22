@@ -1,4 +1,4 @@
 	$ docker-machine create -d virtualbox --virtualbox-memory 8192 --virtualbox-cpu-count 4 --engine-insecure-registry 172.30.0.0/16 openshift
-	$ oc cluster up --docker-machine=openshift
+	$ oc cluster up --image=registry.access.redhat.com/openshift3/ose --docker-machine=openshift
 	$ oc login -u system:admin
 	$ oc create -n openshift -f https://raw.githubusercontent.com/jboss-dockerfiles/hawkular-apm/master/openshift-templates/hawkular-apm-server.yml
